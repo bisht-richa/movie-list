@@ -17,7 +17,7 @@ const validateKey = (req, res, next) => {
   if (api_key == api_keys ) {
       next()
   } else {
-      res.status(403).send({ error: { code: 403, message: 'You not allowed.' } });
+      res.status(403).send({ error: { code: 403, message: 'You are not allowed.' } });
   }
 }
 
