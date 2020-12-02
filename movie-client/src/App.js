@@ -1,8 +1,9 @@
 import React, { useReducer, useEffect } from 'react';
 import { moviesReducer, initialState } from './store/Movies.store'
 import MoviesCard from './components/MoviesCard'
-
 import './assets/scss/index.scss'
+
+const { REACT_APP_KEY } = process.env;
 
 const App = () => {
   const [state, dispatch] = useReducer(moviesReducer, initialState)
@@ -14,7 +15,7 @@ const App = () => {
         mode: 'cors',
         headers: {
           'Content-Type': 'text/plain',
-          'X-Api-Key': '95e41df0-5848-42f9-b3c7-e765753bffd0'
+          'X-Api-Key': REACT_APP_KEY
         }
       })
       .then(response => response.json())
