@@ -2,9 +2,6 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios')
 
-require('dotenv').config()
-const api_keys = process.env.API_KEY
-
 const data = async () => {
     const urlData = 'https://www.omdbapi.com/?s=city&apikey=e730671f'
     const request = await axios.get(urlData)
@@ -14,7 +11,7 @@ const data = async () => {
 
 const validateKey = (req, res, next) => {
   let api_key = req.headers['x-api-key']
-  if (api_key == api_keys ) {
+  if (api_key == '95e41df0-5848-42f9-b3c7-e765753bffd0' ) {
       next()
   } else {
       res.status(403).send({ error: { code: 403, message: 'You are not allowed.' } });

@@ -31,8 +31,6 @@ const App = () => {
             payload: jsonResponse.error.message
           })
         }
-      }).catch(err => {
-        console.log(err)
       })
   }
 
@@ -135,5 +133,4 @@ const App = () => {
       </div>
   )
 }
-
 export default App
