@@ -14,10 +14,10 @@
   ```
     npm install
   ```
+4. To add API Key in client, duplicate the file `.env.template` into a new file called `.env` and add your API key to `API_KEY` variable.
 5. `cd ..` Go back to the base folder and run `npm run dev`
-5. It will start both node server and client.
-7. To add API Key in client, duplicate the file `.env.template` into a new file called `.env` and add your API key to `API_KEY` variable.
-6. Open `localhost:3000`
+6. It will start both node server and client.
+7. Open `localhost:3000`
 
 
 ### Main page:
